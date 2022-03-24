@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,6 +13,7 @@ import { ProductComponent } from './product/product.component';
 
 import { ShopReducer } from './store/reducer';
 import { ShopEffects } from './store/effects';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +29,13 @@ import { ShopEffects } from './store/effects';
     InfiniteScrollModule,
     StoreModule.forRoot({ shop: ShopReducer }),
     EffectsModule.forRoot([ShopEffects]),
+  ],
+  exports: [
+    HomeComponent,
+    HeaderComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent],

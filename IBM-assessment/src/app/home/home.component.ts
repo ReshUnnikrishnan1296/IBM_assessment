@@ -9,7 +9,7 @@ import { Product } from '../product/product.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor(private store: Store<{ items: Product[]; cart: [] }>) {
+  constructor(private store: Store<{ items: Product[] }>) {
     store.pipe(select('shop')).subscribe(data => (this.items = data.items));
     console.log("Home component");
     console.log(this.items);

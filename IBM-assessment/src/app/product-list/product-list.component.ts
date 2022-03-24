@@ -10,13 +10,15 @@ import { ProductsService } from '../services/products.service';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss'],
 })
+
+
 export class ProductListComponent implements OnInit {
   constructor(
-    private fruitService: ProductsService,
-    private store: Store<{ items: []; cart: [] }>
+    private productService: ProductsService,
+    private store: Store<{ items: [] }>
   ) {}
 
-  @Input() fruits: Product[] = [];
+  @Input() coffee: Product[] = [];
   throttle = 50;
   scrollDistance = 0.2;
   limit = 10;
