@@ -1,0 +1,24 @@
+<!-- <div class="product">
+   <div class="product-image-holder">
+    <img [src]="product.image" [alt]="product.name" class="product-image" />
+  </div>
+  <div class="product-details">
+    <p class="product-details__name">{{ product.blend_name }}</p>
+    <p class="product-details__price">${{ product.variety }}</p>
+  </div>
+  <div class="product-description">
+    <p>{{ product.notes }}</p>
+  </div>
+</div> -->
+
+<div class="grid-item">
+  <div class="grid-item-heading-left">
+    <b>{{product.blend_name}}</b>
+  </div>
+  <div class="grid-item-details">
+    <div class="origin-lbl"><i><b>Origin:</b></i> {{product.origin}}</div>
+    <div class="variety-lbl"><i><b>Variety:</b></i> {{product.variety}}</div>
+    <div class="intensifier-lbl"><i><b>Intensifier:</b></i> {{product.intensifier}}</div>
+    <div class="notes-lbl"><i><b>Notes:</b></i> {{product.notes}}</div>
+  </div>
+</div> 
