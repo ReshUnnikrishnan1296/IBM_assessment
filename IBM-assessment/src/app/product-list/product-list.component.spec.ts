@@ -39,7 +39,7 @@ describe('ProductListComponent', () => {
     .compileComponents();
     fixture = TestBed.createComponent(ProductListComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    
   }));
 
   beforeEach(() => {
@@ -49,11 +49,12 @@ describe('ProductListComponent', () => {
     // Pcomponent.product = expectedProductList;
     // prod = expectedProductList;
     // component.coffee = [prod];
-    fixture.detectChanges();
+    
     
   });
 
   it('should create', () => {
+    fixture.detectChanges();
     expect(component).toBeTruthy();
   });
 });

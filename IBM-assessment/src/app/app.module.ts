@@ -13,6 +13,9 @@ import { ProductComponent } from './product/product.component';
 
 import { ShopReducer } from './store/reducer';
 import { ShopEffects } from './store/effects';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { FooterComponent } from './footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -22,6 +25,8 @@ import { ShopEffects } from './store/effects';
     HeaderComponent,
     ProductListComponent,
     ProductComponent,
+    ProductDetailsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +34,7 @@ import { ShopEffects } from './store/effects';
     InfiniteScrollModule,
     StoreModule.forRoot({ shop: ShopReducer }),
     EffectsModule.forRoot([ShopEffects]),
+    AppRoutingModule,
   ],
   exports: [
     HomeComponent,

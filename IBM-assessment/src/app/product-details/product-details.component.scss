@@ -1,0 +1,60 @@
+main{
+    width: 90%;
+    margin: auto;
+    height: 75vh;
+    padding: 20px 15px;
+  
+    .banners{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      div{
+        width: 26%;
+        margin-right: 10px;
+        img{
+          height: 200px;
+          width: 100%;
+          max-width: 100%;
+          border-radius: 10px;
+          object-fit: cover;
+  
+          &:hover{
+            transform: translateY(-10px);
+            transition: 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  
+  .product-area{
+    height: 90vh;
+    border: 1px solid black;
+  }
+
+  .prd-img{
+      float: left;
+      width: 30%;
+      height: 52vh;
+      margin: 10% 0 0 10%;
+  }
+
+  .prd-heading{
+      border: 1px solid black;
+      margin: 10% 0 0 56%;
+      width: 30%;
+      height: 7vh;
+  }
+
+  .prd-details{
+    border: 1px solid black;
+    margin: 3% 0 0 56%;
+    width: 30%;
+    height: 37vh;
+  }
+  
+  img {
+    border-radius: 10%;
+  }
+  

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 export interface Product {
@@ -12,12 +12,11 @@ export interface Product {
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  styleUrls: ['./product.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductComponent implements OnInit {
-  constructor(private store: Store<{ items: []; cart: [] }>) {}
-
-  inCart = false;
+  constructor(private store: Store<{ items: []}>) {}
   @Input() product: Product;
 
   ngOnInit() {}
