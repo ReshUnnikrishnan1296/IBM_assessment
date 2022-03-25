@@ -11,8 +11,19 @@ export interface Product {
 export enum ActionTypes {
   LoadItems = '[Products] Load items from server',
   LoadSuccess = '[Products] Load success',
+  LoadProduct = '[Products] Load Product',
+  SetProductId = 'Set Product'
 }
 
+export class SetProductId implements Action {
+  readonly type = ActionTypes.SetProductId;
+  constructor(public payload: { id: number }){}
+}
+
+export class GetProduct implements Action {
+  readonly type = ActionTypes.LoadProduct;
+  constructor(public payload: { id: number }){}
+}
 
 export class GetItems implements Action {
   readonly type = ActionTypes.LoadItems;
@@ -26,4 +37,4 @@ export class LoadItems implements Action {
   constructor(public payload: Product[]) {}
 }
 
-export type ActionsUnion = LoadItems | GetItems;
+export type ActionsUnion = LoadItems | GetItems | GetProduct | SetProductId;
