@@ -6,11 +6,6 @@ npm install
 
 ng serve
 
-
-Please access the application hosted at: 
-
-
-
 Home page:
 
 - Lists 10 items fetched from the given API https://random-data-api.com/api/coffee/random_coffee
